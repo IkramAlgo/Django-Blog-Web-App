@@ -1,0 +1,12 @@
+<h2>FBV To-Do List</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Add</button>
+</form>
+
+<ul>
+  {% for todo in todos %}
+    <li>{{ todo.title }} - {{ todo.completed }}</li>
+  {% endfor %}
+</ul>
