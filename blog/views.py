@@ -21,3 +21,5 @@ def home(request):
     posts = BlogPost.objects.filter(is_deleted=False)  # ✅ Only show non-deleted posts
     return render(request, 'blog/home.html', {'posts': posts})
 
+
+

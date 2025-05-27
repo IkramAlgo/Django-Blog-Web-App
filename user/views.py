@@ -16,10 +16,8 @@ def register(request):
             messages.success(request, f'Your account has been created! you are now able to login')
             
             return redirect('login')
-        
     else:
         form = UserRegisterForm()
-        
     return render(request, 'user/register.html', {'form': form})
 
 def logout_view(request):

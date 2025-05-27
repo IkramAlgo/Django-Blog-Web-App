@@ -19,6 +19,8 @@ from django.urls import path, include
 from django.contrib.auth import views as auth_views
 from todo.views import todo_list_fbv, TodoListCBV
 from user import views as user_views
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -32,3 +34,10 @@ urlpatterns = [
     path('profile/', user_views.profile, name='profile'),
 
 ]
+
+
+if settings.DEBUG: # Check if the DEBUG setting is True
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
+    
+    # This line serves media files during development.
+    # In production, you should configure your web server to serve these files.
