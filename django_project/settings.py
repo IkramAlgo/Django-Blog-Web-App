@@ -142,3 +142,8 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = ["bootstrap4"]
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+LOGIN_REDIRECT_URL = 'blog-home'  # Redirects to blog-home after login
+
+LOGIN_URL = 'login'  # URL to redirect to for login
