@@ -8,3 +8,5 @@ class UserConfig(AppConfig):
     def ready(self):
         import user.signals  # Import the signals module to ensure signals are registered
 
+# This ensures that the signals are connected when the app is ready
+# and the app is loaded.

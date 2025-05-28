@@ -21,6 +21,8 @@ from todo.views import todo_list_fbv, TodoListCBV
 from user import views as user_views
 from django.conf import settings
 from django.conf.urls.static import static
+# This is the main URL configuration for the Django project.
+
 
 
 urlpatterns = [

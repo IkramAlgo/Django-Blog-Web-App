@@ -135,10 +135,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-import os
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Directory for uploaded media files
-MEDIA_URL = '/media/'  # URL to access media files
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 CRISPY_ALLOWED_TEMPLATE_PACKS = ["bootstrap4"]
