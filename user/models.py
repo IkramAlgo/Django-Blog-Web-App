@@ -15,7 +15,7 @@ class Profile(models.Model): # User Profile Model
         return f'{self.user.username} Profile'
     
     def save(self, *args, **kwargs): # this is for image resizing 
-        super().save()
+        super().save(*args, **kwargs)
         
         img = Image.open(self.image.path)
         
