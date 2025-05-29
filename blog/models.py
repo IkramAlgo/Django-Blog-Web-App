@@ -5,7 +5,7 @@ from django.urls import reverse
 
 
 class Post(models.Model):
-    title = models.CharField(max_length=100) # A short text (like the post title)
+    title = models.CharField(max_length=255) # A short text (like the post title)
     content = models.TextField()  # A long text (like the post body)
     date_posted = models.DateTimeField(default=timezone.now) # Auto-set when created
     author = models.ForeignKey(User, on_delete = models.CASCADE)
